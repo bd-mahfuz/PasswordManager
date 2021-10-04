@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "115836100766",
+    "firebase_url": "https://pass-manager-cd7aa.firebaseio.com",
+    "project_id": "pass-manager-cd7aa",
+    "storage_bucket": "pass-manager-cd7aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115836100766:android:2f9abdeca5eb81812d5b8f",
+        "android_client_info": {
+          "package_name": "com.jfaq.passmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "115836100766-nnmm065e35nt9ct1p8ur3nu00q22joit.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jfaq.passmanager",
+            "certificate_hash": "978d177ca14cacefe35f656b9d2383e8fd214cfb"
+          }
+        },
+        {
+          "client_id": "115836100766-lkamb7tv1riut2h9dqv0prgcgot46o83.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyVLU3kOcXk8WYUjQN_PshJ8Job9dVer8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "115836100766-lkamb7tv1riut2h9dqv0prgcgot46o83.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Password Manager</string>
+    <string name="SKIP">Skip</string>
+    <string name="GOT_IT">Got it</string>
+    <string name="registration">Registration</string>
+    <string name="enter_your_phone_number">Enter Your phone number</string>
+    <string name="we_will_sent_verification_code_to_verify">We will sent verification code to verify.</string>
+    <string name="phone_number">Phone number</string>
+    <string name="verify_your_number">Verify Your Number</string>
+    <string name="verification_text">Please enter your mobile number to receive a verification code</string>
+    <string name="no_other_time">NO, OTHER TIME</string>
+    <string name="_880">+880</string>
+    <string name="passmanager">PassManager</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="disable_internet_while_using_this_app">Disable internet while using this app</string>
+    <string name="middle_lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin</string>
+</resources>
