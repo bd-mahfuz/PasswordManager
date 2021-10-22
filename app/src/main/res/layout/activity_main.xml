@@ -5,7 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="mainViewModel"
+            type="com.jfaq.passmanager.viewmodel.MainViewModel" />
     </data>
 
 <RelativeLayout
@@ -36,7 +38,13 @@
                     android:layout_height="?attr/actionBarSize"
                     android:layout_marginBottom="@dimen/spacing_middle" />
 
-                <include layout="@layout/layout_credential_item" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/credential_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/layout_credential_item"/>
 
             </LinearLayout>
 
@@ -49,6 +57,17 @@
         android:id="@+id/search_bar"
         layout="@layout/layout_search_bar" />
 
+    <TextView
+        android:id="@+id/no_data_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_data_found"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        >
+    </TextView>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
@@ -59,6 +78,20 @@
         app:itemIconTint="@drawable/color_state_primary"
         app:itemTextColor="@drawable/color_state_primary"
         app:menu="@menu/menu_bottom_navigation_basic" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addCredBt"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/navigation"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_add_24"
+        android:contentDescription="@string/email"
+        android:onClick="@{()-> mainViewModel.onClickAddCredentialButton()}"
+        android:focusable="true" />
 
 </RelativeLayout>
 

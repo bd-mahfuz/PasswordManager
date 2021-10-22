@@ -57,6 +57,7 @@ public class UserRepository {
         executorService.submit(() -> {
             userLiveData.postValue(userDao.getAll());
         });
+        executorService.shutdown();
         return userLiveData;
     }
 }

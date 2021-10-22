@@ -21,6 +21,7 @@ public class CredentialInfo {
     private int id;
     @ColumnInfo(name = "user_name")
     private String userName;
+    private String email;
     private String password;
     private String hint;
     private String title;
@@ -92,5 +93,13 @@ public class CredentialInfo {
 
     public void setCredentialCategoryId(int credentialCategoryId) {
         this.credentialCategoryId = credentialCategoryId;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
