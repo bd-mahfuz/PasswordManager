@@ -1,4 +1,12 @@
 <resources>
+
+    <array name="password_hint">
+        <item>Best Player</item>
+        <item>Your Village Name</item>
+        <item>Favourite Movie</item>
+        <item>Your Profession</item>
+    </array>
+
     <string name="app_name">Password Manager</string>
     <string name="SKIP">Skip</string>
     <string name="GOT_IT">Got it</string>
@@ -15,4 +23,9 @@
     <string name="email">Email</string>
     <string name="disable_internet_while_using_this_app">Disable internet while using this app</string>
     <string name="middle_lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin</string>
+    <string name="no_data_found">No Data found</string>
+    <string name="required">Required</string>
+    <string name="titleError">Title should not be empty</string>
+    <string name="categoryNotSelected">Please choose a category </string>
+
 </resources>

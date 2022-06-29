@@ -1,5 +1,6 @@
 package com.jfaq.passmanager.viewModelFactory;
 
+import android.app.Application;
 import android.content.Context;
 
 import androidx.annotation.NonNull;
@@ -17,20 +18,21 @@ import lombok.SneakyThrows;
 
 public class CustomViewModelFactory extends ViewModelProvider.NewInstanceFactory {
 
-    private Context context;
+    private final Application application;
 
-    public CustomViewModelFactory(Context context) {
-        this.context = context;
+    public CustomViewModelFactory(Application context) {
+        this.application = context;
     }
 
     @SneakyThrows
     @NonNull
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
-        return (T) modelClass.getConstructor(Context.class).newInstance(context);
-        /*if (context instanceof LoginActivity) {
-            return (T) new LoginViewModel(context);
+        try {
+            return (T) modelClass.getConstructor(Application.class).newInstance(application);
+        } catch (IllegalAccessException | InstantiationException | InvocationTargetException | NoSuchMethodException e) {
+            e.printStackTrace();
         }
-        return null;*/
+        return null;
     }
 }

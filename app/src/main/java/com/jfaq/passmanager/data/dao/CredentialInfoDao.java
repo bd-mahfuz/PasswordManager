@@ -1,5 +1,6 @@
 package com.jfaq.passmanager.data.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -14,7 +15,7 @@ import java.util.List;
 public interface CredentialInfoDao {
 
     @Query("select * from credential_info")
-    List<CredentialInfo> getAllCredentialInfo();
+    LiveData<List<CredentialInfo>> getAllCredentialInfo();
 
     @Query("select * from credential_info where id = :id")
     CredentialInfo findById(int id);

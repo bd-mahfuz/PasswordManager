@@ -1,11 +1,18 @@
 package com.jfaq.passmanager.data.entities;
 
+import android.widget.ImageView;
+
+import androidx.databinding.BindingAdapter;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Index;
 import androidx.room.Insert;
 import androidx.room.PrimaryKey;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.jfaq.passmanager.R;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,6 +28,7 @@ public class CredentialInfo {
     private int id;
     @ColumnInfo(name = "user_name")
     private String userName;
+    private String email;
     private String password;
     private String hint;
     private String title;
@@ -93,4 +101,23 @@ public class CredentialInfo {
     public void setCredentialCategoryId(int credentialCategoryId) {
         this.credentialCategoryId = credentialCategoryId;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
+    @BindingAdapter("imageUrl")
+    public  static void loadImage(ImageView imageView, String imageUrl) {
+        Glide.with(imageView.getContext())
+                .load(imageUrl)
+                .placeholder(R.drawable.photo_female_1)
+                .apply(new RequestOptions().circleCrop())
+                .into(imageView);
+    }
+
 }

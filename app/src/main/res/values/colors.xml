@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#1976D2</color>
+    <color name="colorPrimaryTransparent">#341976D2</color>
     <color name="colorPrimaryDark">#1565C0</color>
     <color name="colorPrimaryLight">#1E88E5</color>
     <color name="colorAccent">#37474F</color>
@@ -73,6 +74,7 @@
 
     <color name="light_blue_50">#E1F5FE</color>
     <color name="light_blue_100">#B3E5FC</color>
+    <color name="light_blue_200_t">#B081D4FA</color>
     <color name="light_blue_200">#81D4FA</color>
     <color name="light_blue_300">#4FC3F7</color>
     <color name="light_blue_400">#29B6F6</color>

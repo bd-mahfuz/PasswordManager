@@ -17,12 +17,10 @@ import java.util.concurrent.Executors;
 
 public class UserRepository {
 
-    private Context context;
     private UserDao userDao;
     private static UserRepository userRepository;
 
     private UserRepository(Context context) {
-        this.context = context;
         this.userDao = AppDatabase.getAppDatabase(context).userDao();
     }
 
@@ -57,6 +55,7 @@ public class UserRepository {
         executorService.submit(() -> {
             userLiveData.postValue(userDao.getAll());
         });
+        executorService.shutdown();
         return userLiveData;
     }
 }

@@ -13,7 +13,6 @@ import android.widget.Toast;
 import com.jfaq.passmanager.databinding.ActivityLoginBinding;
 import com.jfaq.passmanager.data.entities.User;
 import com.jfaq.passmanager.enums.Action;
-import com.jfaq.passmanager.viewModelFactory.CustomViewModelFactory;
 import com.jfaq.passmanager.viewmodel.LoginViewModel;
 import com.jfaq.passmanager.viewmodel.MainViewModel;
 
@@ -32,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
 
-        mLoginViewModel = new ViewModelProvider(this, new CustomViewModelFactory(this)).get(LoginViewModel.class);
+        mLoginViewModel = new ViewModelProvider(this).get(LoginViewModel.class);
         mLoginBinding.setLoginViewModel(mLoginViewModel);
         mLoginViewModel.getActionLiveData().observe(this, (actionModel) -> {
             switch (actionModel.getAction()) {

@@ -43,6 +43,7 @@ public class CredentialCategoryRepository {
                 e.printStackTrace();
             }
         });
+        executorService.shutdown();
         return isSaved;
     }
 

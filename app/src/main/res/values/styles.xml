@@ -1,8 +1,15 @@
 <resources>
+    <!--<style name="Theme.MyApp" parent="Theme.Material3.DayNight.NoActionBar">
+        &lt;!&ndash; Original AppCompat attributes. &ndash;&gt;
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSecondary">@color/colorAccent</item>
 
+    </style>-->
     <style name="AppTheme" parent="BaseTheme" />
 
-    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="BaseTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -10,6 +17,19 @@
         <item name="windowActionModeOverlay">true</item>
         <item name="android:actionModeBackground">@color/blue_grey_600</item>
         <item name="android:dialogTheme">@style/Dialog.Theme</item>
+    </style>
+
+    <style name="MyDenseOutlined" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="materialThemeOverlay">@style/MyThemeOverlayOutlinedDense</item>
+
+    </style>
+    <style name="MyThemeOverlayOutlinedDense">
+        <item name="editTextStyle">@style/MyTextInputEditText_outlinedBox_dense_h
+        </item>
+    </style>
+    <style name="MyTextInputEditText_outlinedBox_dense_h" parent="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

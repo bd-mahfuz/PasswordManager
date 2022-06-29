@@ -7,14 +7,21 @@ import androidx.room.PrimaryKey;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@Data
+
 @Entity(tableName = "credential_category",
         indices = {@Index(value = "title", unique = true)})
 public class CredentialCategory {
     @PrimaryKey(autoGenerate = true)
     private int id;
     private String title;
+
+    public CredentialCategory() {
+    }
+
+    public CredentialCategory(int id, String title) {
+        this.id = id;
+        this.title = title;
+    }
 
     public int getId() {
         return id;

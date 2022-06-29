@@ -25,6 +25,10 @@ public interface CredentialCategoryDao {
     @Insert
     void save(CredentialCategory credentialCategory);
 
+    @Insert
+    void saveAll(List<CredentialCategory> credentialCategoryList);
+
+
     @Update
     void update(CredentialCategory credentialCategory);
 
