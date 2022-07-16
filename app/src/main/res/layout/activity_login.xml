@@ -115,16 +115,10 @@
                 android:fontFamily="@font/lato"
                 android:onClick="@{() -> loginViewModel.loginAction()}"/>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_exit"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/sign_in_button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/no_other_time"
-                android:textColor="@color/grey_40"
-                android:fontFamily="@font/lato"
-                android:onClick="@{() -> loginViewModel.test()}"/>
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 

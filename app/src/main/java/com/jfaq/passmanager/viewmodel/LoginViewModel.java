@@ -1,5 +1,6 @@
 package com.jfaq.passmanager.viewmodel;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
@@ -25,13 +26,13 @@ public class LoginViewModel extends ViewModel {
 
     public ObservableField<String> email = new ObservableField<>("");
     public ObservableField<String> pass = new ObservableField<>("");
-    private Context context;
+    private Application context;
     private UserRepository userRepository;
 
     private MutableLiveData<ActionModel> actionLiveData = new MutableLiveData<>();
 
 
-    public LoginViewModel(Context context) {
+    public LoginViewModel(Application context) {
         this.context = context;
         userRepository = UserRepository.getInstance(context);
     }
